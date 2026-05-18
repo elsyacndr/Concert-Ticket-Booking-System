@@ -47,6 +47,68 @@ Project website fullstack sederhana menggunakan PHP Native, MySQL, Bootstrap 5, 
 
 ## Catatan
 
-- Semua query menggunakan prepared statement dan sanitasi input dasar.
+- Semua query menggunakan **prepared statement** dan sanitasi input dasar.
 - Project dibuat dengan tema konser modern, warna cerah, dan UI ramah portofolio.
-- Jika post upload belum tersedia, tampilan akan menampilkan placeholder fallback.
+- Poster/Payment/Avatar menggunakan folder upload di `assets/images/`.
+
+---
+
+## Ringkasan Fitur Lengkap
+
+### 1) Autentikasi
+- Register akun customer.
+- Login dengan role **admin** dan **customer**.
+- Logout.
+
+### 2) Admin
+- **CRUD Event**: tambah, edit, hapus, dan tampilkan daftar event.
+- **Manajemen Booking**: melihat transaksi booking.
+- **Laporan**: rekap transaksi dengan filter tanggal serta aksi print.
+- **Manajemen User**: melihat data user customer.
+
+### 3) Customer
+- Lihat daftar event (search + filter status + pagination).
+- Lihat detail event.
+- Booking tiket.
+- Upload bukti pembayaran.
+- Melihat tiket/invoice (sesuai alur halaman yang tersedia).
+
+### 4) UI/UX
+- Menggunakan **Bootstrap 5** untuk komponen dan layout responsif.
+- Menampilkan badge status event/booking dengan warna berbeda.
+- Fallback tampilan poster jika file gambar belum tersedia.
+
+---
+
+## Struktur Folder (Detail)
+- `auth/`: login & register
+- `admin/`: dashboard admin, crud event, booking, reports, users
+- `customer/`: dashboard customer, events, event detail, booking, invoice/ticket, upload payment
+- `config/`: koneksi database & session helper
+- `includes/`: header/navbar/footer/sidebar dan helper functions
+- `assets/`: CSS/JS dan folder gambar (`posters/`, `payments/`, `avatars/`)
+- `database/`: SQL seed & struktur tabel
+
+---
+
+## Konfigurasi & Instalasi (Lebih detail)
+
+1. Pastikan **Apache** dan **MySQL** di XAMPP aktif.
+2. Buat database baru bernama: `concert_ticket_booking`.
+3. Import file SQL:
+   - `database/concert_ticket_booking.sql`
+4. Cek dan sesuaikan:
+   - `config/database.php` (DB_HOST, DB_USER, DB_PASS, DB_NAME)
+5. Akses via browser:
+   - `http://localhost/Concert%20Ticket%20Booking%20System`
+
+---
+
+## Catatan Implementasi
+
+- Poster/Payment/Avatar mengikuti aturan `.gitignore` (file upload user tidak ikut terkomit ke GitHub), tetapi folder kosong tetap tersimpan menggunakan `.gitkeep`.
+- Jika poster yang dimaksud belum tersedia, UI menggunakan **placeholder fallback**.
+- Prepared statement digunakan pada query berbasis input pengguna.
+
+
+
