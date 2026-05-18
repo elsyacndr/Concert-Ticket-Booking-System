@@ -50,3 +50,8 @@ Project website fullstack sederhana menggunakan PHP Native, MySQL, Bootstrap 5, 
 - Semua query menggunakan prepared statement dan sanitasi input dasar.
 - Project dibuat dengan tema konser modern, warna cerah, dan UI ramah portofolio.
 - Jika post upload belum tersedia, tampilan akan menampilkan placeholder fallback.
+
+---
+
+Catatan: PR ini dibuat untuk kebutuhan pengajuan upload ke GitHub (branch `blackboxai/pr-1`).
+
