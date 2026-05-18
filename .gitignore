@@ -1,0 +1,18 @@
+# Uploaded files user - jangan di-commit
+assets/images/posters/*.jpg
+assets/images/posters/*.jpeg
+assets/images/posters/*.png
+assets/images/posters/*.gif
+!assets/images/posters/.gitkeep
+assets/images/payments/*
+!assets/images/payments/.gitkeep
+assets/images/avatars/*
+!assets/images/avatars/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
